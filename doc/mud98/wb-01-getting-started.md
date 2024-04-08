@@ -52,9 +52,12 @@ I have tested and verified that Mud98 builds without error and executes without 
 
 I have not tested Mud98 under production load on Windows. Theoretically is _should_ be fine; the original ROM codebase is far more copacetic with modern Microsoft than it was in the MS-DOS days.
 
+sudo apt install build-essentials
+
 #### CMake 3.12 or higher
 
 I chose to leave behind the convenience and ease-of-use of conventional Makefiles because of the absolute ease of cross-platform configuration CMake brings. Writing CMake scripts isn't easy, at all; but hopefully I've done the hard work for you.
+sudo apt install cmake
 
 #### Pthreads library (Linux & Cygwin only)
 
@@ -73,6 +76,8 @@ In Mud98, OpenSSL provides secure TLS connection as well as SHA256 hashing for p
 #### ZLib (optional)
 
 If you have the ZLib development library, Mud98 will have MCCP (MUD Client Compression Protocol) enabled out-of-the-box. This will greatly reduce the amount of traffic needed between the client and server. Even having another package like Strawberry Perl (which I installed to build OpenSSL) is enough for CMake to find a useable copy of ZLib.
+sudo apt install zlib1g
+sudo apt install zlib1g-dev
 
 ### Building on Linux and Cygwin
 
